@@ -1,0 +1,24 @@
+{
+  "name": "Chaos",
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Chrome plugin",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Currency Exchange",
+    "default_popup": "currex.html",
+    "default_icon": "hello_extensions.png"
+  }
+}
